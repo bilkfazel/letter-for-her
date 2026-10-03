@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>یک نامه‌ی محرمانه 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f0e3cc;--ink:#422c27;--red:#8f2630;--dark:#24160f}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;background:radial-gradient(ellipse at top,#755035 0,#3a2519 58%,#1b100b 100%);display:flex;align-items:center;justify-content:center;padding:28px 14px;overflow-x:hidden}
+.desk{width:min(100%,560px);text-align:center}.hint{color:#f5e5d0;font-size:14px;margin:0 0 18px;opacity:.9}.envelope{position:relative;min-height:300px;background:linear-gradient(135deg,#f5e9d5,#dfc9a8);border-radius:5px;box-shadow:0 20px 45px #0008;overflow:hidden;border:1px solid #d1b995;transition:transform .5s}.envelope:before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,transparent 49.5%,#cbb28e 50%,transparent 50.5%),linear-gradient(35deg,transparent 49.5%,#d4bd99 50%,transparent 50.5%);opacity:.9;pointer-events:none}.stamp{position:absolute;top:22px;left:20px;border:2px dashed #9b3436;color:#9b3436;padding:8px 12px;transform:rotate(-7deg);font-weight:800;font-size:18px;line-height:1.35}.date{position:absolute;top:20px;right:20px;border:3px double #9b3436;border-radius:50%;width:68px;height:68px;display:grid;place-content:center;color:#9b3436;font-weight:700;font-size:13px;transform:rotate(5deg)}.open-note{position:absolute;right:20px;bottom:48px;font-size:15px;line-height:1.8;text-align:right}.flower{position:absolute;left:22px;bottom:18px;font-size:30px;transform:rotate(-15deg)}.signature{position:absolute;left:75px;bottom:18px;font-family:'Dancing Script',cursive;font-size:35px;color:#241610;transform:rotate(-7deg)}.seal{position:absolute;z-index:2;left:50%;top:58%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:45% 52% 47% 50%;display:grid;place-content:center;background:radial-gradient(circle at 30% 25%,#b34b53,#791923 70%);color:#f7d5d0;font-size:36px;box-shadow:0 5px 10px #5d1c22a0;border:2px solid #70202a}.open-btn{margin-top:22px;border:1px solid #d35b65;border-radius:999px;padding:13px 25px;background:linear-gradient(#a83240,#721c29);color:#fff4e6;font:700 16px 'Vazirmatn',sans-serif;box-shadow:0 7px 20px #0005;cursor:pointer;transition:transform .2s}.open-btn:hover{transform:translateY(-2px)}.letter{display:none;position:relative;margin:22px auto 0;padding:32px 23px 26px;background:linear-gradient(145deg,#f6ead4,#e7d2b2);border:1px solid #d0b48c;box-shadow:0 18px 38px #0007;animation:appear .9s ease both;text-align:center}.letter.show{display:block}.letter:before{content:'✿';position:absolute;bottom:12px;left:18px;font-size:28px;color:#4e3728}.letter h1{font-size:23px;color:#8e2932;margin:0 0 20px}.letter p{font-size:17px;line-height:2.1;margin:0 auto 15px;max-width:440px}.letter .wish{font-size:21px;font-weight:700;margin-top:18px}.letter .sign{font-family:'Dancing Script',cursive;direction:ltr;font-size:43px;margin-top:12px;color:#241610}.tiny{color:#f1dfca;font-size:12px;margin-top:18px;opacity:.75}@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:400px){.envelope{min-height:270px}.stamp{font-size:15px}.open-note{font-size:13px}.letter{padding:27px 15px}.letter h1{font-size:20px}.letter p{font-size:15px}}
+</style>
+</head>
+<body>
+<main class="desk">
+<p class="hint">یه نامه‌ی کوچیک، مخصوص یه نفر 🌷</p>
+<section class="envelope" aria-label="پاکت نامه">
+<div class="stamp">محرمانه<br><small>مخصوص یک نفر</small></div>
+<div class="date">۱۹<br>مهر</div>
+<div class="open-note">با لبخند<br>باز کنید<br>☺ ♡</div>
+<div class="flower">✿</div><div class="signature">fazel</div>
+<div class="seal">♡</div>
+</section>
+<button class="open-btn" id="openBtn" type="button">✉️ &nbsp; باز کردن نامه</button>
+<article class="letter" id="letter" aria-live="polite">
+<h1>⚠️ اطلاعیه مهم ⚠️</h1>
+<p>به مناسبت ۱۹ مهر، به شما یک عدد «تبریک روز دختر» تعلق گرفته. لطفاً این تبریک را با لبخند دریافت کرده و تا پایان سال اعتبار آن را حفظ کنید. 😂🌷</p>
+<p class="wish">روزت مبارک :)</p>
+<div class="sign">fazel</div>
+</article>
+<p class="tiny">با یه لبخند بازش کن ♡</p>
+</main>
+<script>
+const button=document.getElementById('openBtn');
+const letter=document.getElementById('letter');
+button.addEventListener('click',()=>{
+  letter.classList.add('show');
+  button.textContent='💌 نامه باز شد';
+  button.disabled=true;
+  letter.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+</script>
+</body>
+</html>
